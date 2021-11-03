@@ -1,4 +1,9 @@
 zn "%SYS"
+// 日本語ロケールに変更（コンテナがUbuntu英語版のためデフォルトは英語ロケール）を利用
+Do ##class(Config.NLS.Locales).Install("jpuw")
+
 do ##class(Security.Users).UnExpireUserPasswords("*")
 do $system.OBJ.Load("/opt/irisbuild/Installer.cls", "ck") 
 set sc = ##class(App.Installer).Initialize() 
+
+halt

@@ -7,15 +7,20 @@
 	],
 	"settings": {
         "objectscript.conn": {
-            "active": true, 
-            "label": "LOCAL",
+            "active": false,
+            "links": {
+                "Production": "http://localhost:${port}/csp/${ns}/EnsPortal.ProductionConfig.zen?$NAMESPACE=${ns}&PRODUCTION=Solution.MQTT",
+                "UserPortal": "http://localhost:${port}/csp/${ns}/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=SolutionEKG.dashboard"
+            },
             "host": "localhost",
             "port": 52773,
             "username": "SuperUser",
-            "password" : "SYS",
-            "ns": "INTEROP", // this is the namespace you wish to connect to 
+            "password": "demo",
+            "ns": "INTEROP",
             "https": false,
-            
+            "docker-compose": {
+                "service": "iris"
+            }
         },
         "objectscript.conn.password": "demo",
         "objectscript.conn.docker-compose.service": "iris",
