@@ -1,0 +1,29 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+
+  <title>心電図から心拍数（BPM）を取得する</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <h3>このサンプルでは、心電図を装着した3人の患者さんから心電図データの取得をシミュレートしています。
+  患者さんに装着した心電図は、MQTTブローカーに接続し、1秒ごとに心拍数を送信します。<br>
+  <span style="color: red;">追加</span> ボタンを使って、患者を追加することもできます。
+  <p> あなたのMQTTトピックは <span id="SubscriptionString"></span> です</p>
+  </h3>
+  <h1> 患者情報追加（追加ボタンをクリックしてください）</h1>
+  <button type="button" onclick="createPatient()">追加</button>
+    <div id="patients">
+
+
+    </div>
+    
+
+
+</body>
+<!-- The config.js script is created automatically during the installation steps of this exercise in Installer.cls -->
+<!-- It contains a variable declaration for the topic string. -->
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="broker.js"></script>
