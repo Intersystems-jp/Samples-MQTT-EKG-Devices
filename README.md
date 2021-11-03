@@ -44,6 +44,22 @@ MQTT を使った遠隔モニタリングをテーマに、患者さんに装着
     docker-compose exec iris iris session iris -U %SYS "##class(App.Installer).InitializeDocker()"
     ```
 
+    >IRISの起動が完了していないと、上記メソッド実行後、以下のメッセージが出力されます。
+    
+    >*Sign-on inhibited: Startup or Installation in progress*
+
+    >このメッセージが表示される場合は、しばらく待ってから再度実行してください。
+
+    >正常に実行できると、以下のように演習環境用のトピックが表示されます。
+
+    >*You have successfully initiated the MQTT exercise*
+
+    >*Please take note of your topic top-level string: /Student_4908/acmeHospital/EKG/#*
+
+    >*press enter to continue*
+
+    >Enterで元の画面に戻ります。
+
 5) プロダクションを開始
 
     **サーバ名はご利用環境に合わせてご変更ください**
