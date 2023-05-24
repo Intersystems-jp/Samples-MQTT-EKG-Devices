@@ -32,6 +32,8 @@ MQTT を使った遠隔モニタリングをテーマに、患者さんに装着
 
 3) コンテナを開始します（コンテナが作成されていない場合はビルドします）。
 
+    > 2023/5/24現在の最新リリースのコンテナ版IRISを使用しています。利用されるバージョンを変更される場合は、[Dockerfile](/Dockerfile)の2行目を変更してください。使用可能バージョンは[InterSystemsコンテナレジストリ](https://containers.intersystems.com/contents)でご確認いただけます。
+
     ```
     docker-compose up -d
     ```
